@@ -6,18 +6,25 @@
     <title>Lambertson Fine Woodworking | Vermont Custom Woodwork</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Business Card Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
-        // Updated colors for the deep forest green theme
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'vt-forest': '#064e3b', // Deep forest green (main background)
-                        'vt-forest-dark': '#022c22', // Darker green (alternating sections/header)
-                        'vt-wood': '#78350f', // Rich walnut (buttons)
-                        'vt-wood-dark': '#451a03', // Deep mahogany (button hover)
-                        'vt-accent': '#b45309', // Warm oak (accents/icons)
-                        'vt-text-muted': '#cbd5e1', // Slate-300 for readable muted text
+                        'vt-forest': '#064e3b', // Deep forest green
+                        'vt-forest-dark': '#022c22', // Darker green
+                        'vt-wood': '#78350f', // Rich walnut
+                        'vt-wood-dark': '#451a03', // Deep mahogany
+                        'vt-accent': '#b45309', // Warm oak
+                        'vt-text-muted': '#cbd5e1', // Slate-300
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
                     }
                 }
             }
@@ -27,26 +34,28 @@
         html {
             scroll-behavior: smooth;
         }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
     </style>
 </head>
-<body class="bg-vt-forest text-white antialiased">
+<body class="bg-vt-forest text-white font-sans antialiased">
 
     <!-- Header / Navigation -->
     <header class="sticky top-0 z-50 bg-vt-forest-dark/95 backdrop-blur-sm border-b border-green-900">
         <nav class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center md:justify-between gap-4 md:gap-0">
             <!-- Logo Section -->
             <a href="#" class="flex items-center gap-3">
-                <!-- Integrated Hammer & Wood Logo -->
-                <img src="LFW_Logo.png" alt="Lambertson Fine Woodworking Logo" class="w-12 h-12 rounded-full border border-green-800">
-                <span class="text-xl font-bold text-white tracking-tight">Lambertson Fine Woodworking</span>
+                <img src="http://googleusercontent.com/image_generation_content/408" alt="Lambertson Fine Woodworking Logo" class="w-12 h-12 rounded border border-green-800">
+                <span class="text-xl font-serif font-bold text-white tracking-wide">Lambertson Fine Woodworking</span>
             </a>
-            <!-- Navigation Links & Button (Responsive Flex) -->
+            <!-- Navigation Links & Button -->
             <div class="flex flex-col md:flex-row items-center gap-4 mt-4 md:mt-0 text-center md:text-left">
                 <a href="#services" class="text-sm font-medium text-vt-text-muted hover:text-white transition">Our Services</a>
                 <a href="#work" class="text-sm font-medium text-vt-text-muted hover:text-white transition">Our Work</a>
                 <a href="#service-area" class="text-sm font-medium text-vt-text-muted hover:text-white transition">Service Area</a>
                 <a href="#contact" class="bg-vt-wood text-white px-5 py-2.5 rounded text-sm font-semibold hover:bg-vt-wood-dark transition shadow-sm w-full md:w-auto">
-                    Book a Consultation
+                    Schedule a 15-minute phone consultation
                 </a>
             </div>
         </nav>
@@ -55,7 +64,6 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="relative bg-vt-forest overflow-hidden">
-            <!-- Background Accent -->
             <div class="absolute inset-0 opacity-5 text-black">
                 <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 100 L400 0 L800 100 L1200 0 M0 200 L400 100 L800 200 L1200 100" stroke="currentColor" stroke-width="2"/>
@@ -63,15 +71,15 @@
             </div>
             
             <div class="container mx-auto px-6 py-16 md:py-32 text-center relative z-10">
-                <h1 class="mt-6 text-3xl md:text-6xl font-extrabold tracking-tighter text-white">
-                    Quality Carpentry. Built to Last.
+                <h1 class="mt-6 text-3xl md:text-5xl font-serif font-extrabold tracking-tight text-white leading-tight">
+                    Finish Carpentry | Historic Home Renovation
                 </h1>
-                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-vt-text-muted">
-                    From custom built-ins and finish trim to exterior decks, we deliver precise, honest craftsmanship to homes across the Upper Valley.
+                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-vt-text-muted font-light">
+                    From custom built-ins and finish trim to exterior decks, we deliver precise, honest craftsmanship to homes across Northern Vermont.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#contact" class="bg-vt-accent text-white px-8 py-4 rounded text-lg font-semibold hover:bg-vt-accent/90 transition shadow-lg w-full sm:w-auto">
-                        Book a Consultation
+                        Schedule a 15-minute phone consultation
                     </a>
                     <a href="#services" class="bg-vt-forest-dark text-white px-8 py-4 rounded text-lg font-semibold ring-1 ring-green-700 hover:bg-green-900 transition shadow-sm w-full sm:w-auto">
                         View Services
@@ -83,7 +91,7 @@
         <!-- Our Services Section -->
         <section id="services" class="bg-vt-forest-dark container mx-auto px-6 py-16 md:py-24 border-t border-green-900">
             <div class="max-w-2xl mx-auto text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Our Services</h2>
+                <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight text-white">Our Services</h2>
                 <p class="mt-4 text-lg text-vt-text-muted">Precise execution for renovations, repairs, and custom builds.</p>
             </div>
 
@@ -91,34 +99,31 @@
                 <!-- Service 1 -->
                 <div class="bg-vt-forest p-8 rounded-lg border border-green-800 shadow-xl flex flex-col gap-5 hover:border-vt-accent/50 transition group">
                     <div class="w-12 h-12 rounded bg-vt-forest-dark border border-green-700 flex items-center justify-center text-vt-accent group-hover:scale-110 transition-transform">
-                        <!-- Cabinet/Built-in Icon -->
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM4 14h16M10 10h4"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Custom Built-ins</h3>
+                    <h3 class="text-xl font-serif font-bold text-white">Custom Built-ins</h3>
                     <p class="text-vt-text-muted text-sm/relaxed flex-grow">Bookshelves, mudroom cubbies, and entertainment centers designed and built specifically for your space.</p>
-                    <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Book a Consultation →</a>
+                    <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Schedule a 15-minute phone consultation →</a>
                 </div>
 
                 <!-- Service 2 -->
                 <div class="bg-vt-forest p-8 rounded-lg border border-green-800 shadow-xl flex flex-col gap-5 hover:border-vt-accent/50 transition group">
                     <div class="w-12 h-12 rounded bg-vt-forest-dark border border-green-700 flex items-center justify-center text-vt-accent group-hover:scale-110 transition-transform">
-                        <!-- Trim/Ruler Icon -->
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 15.536c-1.171 1.952-3.07 1.536-4.242 0-1.172-1.536-1.172-3.867 0-5.403 1.171-1.536 3.071-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5H3m18 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Finish Carpentry</h3>
+                    <h3 class="text-xl font-serif font-bold text-white">Finish Carpentry</h3>
                     <p class="text-vt-text-muted text-sm/relaxed flex-grow">Crown molding, baseboards, wainscoting, and interior door installations. The details that finish a room.</p>
-                    <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Book a Consultation →</a>
+                    <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Schedule a 15-minute phone consultation →</a>
                 </div>
 
                 <!-- Service 3 -->
                 <div class="bg-vt-forest p-8 rounded-lg border border-green-800 shadow-xl flex flex-col gap-5 hover:border-vt-accent/50 transition group">
                     <div class="w-12 h-12 rounded bg-vt-forest-dark border border-green-700 flex items-center justify-center text-vt-accent group-hover:scale-110 transition-transform">
-                        <!-- Deck/Exterior Icon -->
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Decks & Porches</h3>
+                    <h3 class="text-xl font-serif font-bold text-white">Decks & Porches</h3>
                     <p class="text-vt-text-muted text-sm/relaxed flex-grow">New deck construction, railing replacement, and exterior wood rot repair to keep your home structurally sound.</p>
-                    <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Book a Consultation →</a>
+                    <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Schedule a 15-minute phone consultation →</a>
                 </div>
             </div>
         </section>
@@ -127,33 +132,26 @@
         <section id="work" class="bg-vt-forest py-16 md:py-24 border-t border-green-900">
             <div class="container mx-auto px-6">
                 <div class="max-w-2xl mx-auto text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Examples of Our Work</h2>
+                    <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight text-white">Examples of Our Work</h2>
                     <p class="mt-4 text-lg text-vt-text-muted">A look at some of our recent custom carpentry projects.</p>
                 </div>
                 
-                <!-- Photo Gallery Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <!-- Photo Placeholder 1 -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg flex items-center justify-center group overflow-hidden relative">
                         <span class="text-green-700 font-medium group-hover:opacity-0 transition-opacity">Project Photo</span>
                     </div>
-                    <!-- Photo Placeholder 2 -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg flex items-center justify-center group overflow-hidden relative">
                         <span class="text-green-700 font-medium group-hover:opacity-0 transition-opacity">Project Photo</span>
                     </div>
-                    <!-- Photo Placeholder 3 -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg flex items-center justify-center group overflow-hidden relative">
                         <span class="text-green-700 font-medium group-hover:opacity-0 transition-opacity">Project Photo</span>
                     </div>
-                    <!-- Photo Placeholder 4 -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg flex items-center justify-center group overflow-hidden relative">
                         <span class="text-green-700 font-medium group-hover:opacity-0 transition-opacity">Project Photo</span>
                     </div>
-                    <!-- Photo Placeholder 5 -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg flex items-center justify-center group overflow-hidden relative">
                         <span class="text-green-700 font-medium group-hover:opacity-0 transition-opacity">Project Photo</span>
                     </div>
-                    <!-- Photo Placeholder 6 -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg flex items-center justify-center group overflow-hidden relative">
                         <span class="text-green-700 font-medium group-hover:opacity-0 transition-opacity">Project Photo</span>
                     </div>
@@ -165,11 +163,10 @@
         <section id="service-area" class="bg-vt-forest-dark py-16 md:py-24 border-t border-green-900">
             <div class="container mx-auto px-6">
                 <div class="max-w-2xl mx-auto text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Our Service Area</h2>
+                    <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight text-white">Our Service Area</h2>
                     <p class="mt-4 text-lg text-vt-text-muted">Proudly serving Lamoille, Caledonia, Orleans, and Washington counties.</p>
                 </div>
                 <div class="max-w-xl mx-auto rounded-lg overflow-hidden shadow-2xl border border-green-800">
-                    <!-- Scaled Down Map Image (~30% Smaller) -->
                     <img src="Service_Area_Map.jpg" alt="Service Area Map for Lamoille, Caledonia, Orleans, and Washington counties" class="w-full h-auto block">
                 </div>
             </div>
@@ -180,8 +177,8 @@
             <div class="container mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 
                 <div class="text-center md:text-left">
-                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Tell Us About Your Project</h2>
-                    <p class="mt-4 text-lg text-vt-text-muted">Fill out the form to request a consultation, or leave a message at <a href="tel:18022061350" class="font-semibold text-vt-accent hover:text-white transition">(802) 206-1350</a>.</p>
+                    <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight text-white">Tell Us About Your Project</h2>
+                    <p class="mt-4 text-lg text-vt-text-muted">Fill out the form below to request a walkthrough, or leave a message at <a href="tel:18025550199" class="font-semibold text-vt-accent hover:text-white transition">(802) 555-0199</a>. We aim to respond to all inquiries within one business day.</p>
                     <ul class="mt-8 space-y-3 text-vt-text-muted text-sm font-medium">
                         <li class="flex items-center gap-2 justify-center md:justify-start">✓ Fully Licensed & Insured</li>
                         <li class="flex items-center gap-2 justify-center md:justify-start">✓ Clear, Upfront Pricing</li>
@@ -230,7 +227,7 @@
                         </div>
 
                         <button type="submit" class="w-full bg-vt-wood text-white px-8 py-4 rounded text-lg font-semibold hover:bg-vt-wood-dark transition shadow-lg">
-                            Book a Consultation
+                            Schedule a 15-minute phone consultation
                         </button>
                     </form>
                 </div>
@@ -240,18 +237,14 @@
     </main>
 
     <!-- Footer -->
-<footer class="bg-vt-forest-dark text-green-700 border-t border-green-900">
-    <div class="container mx-auto px-6 py-8 text-center text-sm">
-        <div>
-            &copy; 2026 Lambertson Fine Woodworking. All rights reserved.
+    <footer class="bg-vt-forest-dark text-green-700 border-t border-green-900">
+        <div class="container mx-auto px-6 py-8 text-center text-sm font-light space-y-2">
+            <div>&copy; 2026 Lambertson Fine Woodworking. All rights reserved.</div>
+            <div class="text-xs text-green-800">
+                Website by <span class="font-semibold text-green-600">Ant's AutoMate</span> | Simple Websites &amp; Business Automation
+            </div>
         </div>
-
-        <div class="mt-3 text-xs text-green-500">
-            Website by <span class="font-semibold">Ant's AutoMate</span><br>
-            <i>Simple Websites &amp; Business Automation</i>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
