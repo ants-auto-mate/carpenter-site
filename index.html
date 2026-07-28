@@ -197,7 +197,7 @@
 
                 <!-- Contact Form Section -->
                 <div class="bg-vt-forest-dark p-6 md:p-10 rounded-lg border border-green-800 shadow-2xl">
-                    <form action="#" method="POST" class="space-y-6">
+                    <form id="contact-form" class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label for="first_name" class="block text-sm font-medium text-vt-text-muted">First Name</label>
@@ -257,37 +257,49 @@
 <!-- Add this right before </body> in index.html -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
+    const form = document.getElementById('contact-form') || document.querySelector('form');
     if (!form) return;
 
     form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
+      e.preventDefault(); // Stop browser from navigating to a 405 error page
+      e.stopPropagation();
+
       const submitButton = form.querySelector('button[type="submit"]');
-      const originalButtonText = submitButton.innerHTML;
+      const originalText = submitButton.innerHTML;
       submitButton.innerText = 'Sending...';
       submitButton.disabled = true;
 
+      // Collect all input values explicitly
       const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
+      const payload = {};
+      formData.forEach((value, key) => {
+        payload[key] = value;
+      });
 
       try {
-        await fetch('https://hooks.zapier.com/hooks/catch/28387823/44762x6/', {
+        const response = await fetch('https://hooks.zapier.com/hooks/catch/28387823/44762x6/', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
         });
 
-        alert('Thank you! Your request has been received. We will reach out to you shortly.');
-        form.reset();
+        if (response.ok) {
+          alert('Thank you! Your request has been received. We will reach out to you shortly.');
+          form.reset();
+        } else {
+          throw new Error('Server returned an error');
+        }
       } catch (error) {
-        alert('There was an issue sending your message. Please try again or call us directly.');
+        alert('There was an issue sending your request. Please try again or call us directly.');
+        console.error('Submission error:', error);
       } finally {
-        submitButton.innerHTML = originalButtonText;
+        submitButton.innerHTML = originalText;
         submitButton.disabled = false;
       }
     });
   });
-</script>
-</body>
+</script></body>
 </html>
