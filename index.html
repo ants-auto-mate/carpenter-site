@@ -46,7 +46,6 @@
         <nav class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center md:justify-between gap-4 md:gap-0">
             <!-- Logo Section -->
             <a href="#" class="flex items-center gap-3">
-                <!-- Matches lowercase .jpg in image_10.png -->
                 <img src="LFW_logo.jpg" alt="Lambertson Fine Woodworking Logo" class="w-12 h-12 border border-green-800 object-cover">
                 <span class="text-xl font-serif font-bold text-white tracking-wide">Lambertson Fine Woodworking</span>
             </a>
@@ -96,8 +95,9 @@
                 <p class="mt-4 text-lg text-vt-text-muted">Precise execution for renovations, repairs, and custom builds.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
+            <!-- Responsive 4-column layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1: Custom Built-ins -->
                 <div class="bg-vt-forest p-8 rounded-lg border border-green-800 shadow-xl flex flex-col gap-5 hover:border-vt-accent/50 transition group">
                     <div class="w-12 h-12 rounded bg-vt-forest-dark border border-green-700 flex items-center justify-center text-vt-accent group-hover:scale-110 transition-transform">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM4 14h16M10 10h4"></path></svg>
@@ -107,7 +107,7 @@
                     <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Schedule a 15-minute phone consultation →</a>
                 </div>
 
-                <!-- Service 2 -->
+                <!-- Service 2: Finish Carpentry -->
                 <div class="bg-vt-forest p-8 rounded-lg border border-green-800 shadow-xl flex flex-col gap-5 hover:border-vt-accent/50 transition group">
                     <div class="w-12 h-12 rounded bg-vt-forest-dark border border-green-700 flex items-center justify-center text-vt-accent group-hover:scale-110 transition-transform">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 15.536c-1.171 1.952-3.07 1.536-4.242 0-1.172-1.536-1.172-3.867 0-5.403 1.171-1.536 3.071-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5H3m18 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -117,13 +117,23 @@
                     <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Schedule a 15-minute phone consultation →</a>
                 </div>
 
-                <!-- Service 3 -->
+                <!-- Service 3: Historic Home Renovation (Updated) -->
                 <div class="bg-vt-forest p-8 rounded-lg border border-green-800 shadow-xl flex flex-col gap-5 hover:border-vt-accent/50 transition group">
                     <div class="w-12 h-12 rounded bg-vt-forest-dark border border-green-700 flex items-center justify-center text-vt-accent group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0h4m-4 0H7m4 0V7m0 0h4m-4 0H7"></path></svg>
                     </div>
-                    <h3 class="text-xl font-serif font-bold text-white">Decks & Porches</h3>
-                    <p class="text-vt-text-muted text-sm/relaxed flex-grow">New deck construction, railing replacement, and exterior wood rot repair to keep your home structurally sound.</p>
+                    <h3 class="text-xl font-serif font-bold text-white">Historic Home Renovation</h3>
+                    <p class="text-vt-text-muted text-sm/relaxed flex-grow">Thoughtful, period-accurate restorations that honor your home's original architectural character while updating it for modern living.</p>
+                    <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Schedule a 15-minute phone consultation →</a>
+                </div>
+
+                <!-- Service 4: Custom Projects (New) -->
+                <div class="bg-vt-forest p-8 rounded-lg border border-green-800 shadow-xl flex flex-col gap-5 hover:border-vt-accent/50 transition group">
+                    <div class="w-12 h-12 rounded bg-vt-forest-dark border border-green-700 flex items-center justify-center text-vt-accent group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-4a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white">Custom & Special Projects</h3>
+                    <p class="text-vt-text-muted text-sm/relaxed flex-grow">Have a unique woodworking idea that doesn't fit a standard box? Set up a consultation to turn your vision into a reality.</p>
                     <a href="#contact" class="text-sm font-semibold text-vt-accent hover:text-white flex items-center gap-1.5 w-full sm:w-auto">Schedule a 15-minute phone consultation →</a>
                 </div>
             </div>
@@ -137,21 +147,20 @@
                     <p class="mt-4 text-lg text-vt-text-muted">A look at some of our recent custom carpentry projects.</p>
                 </div>
                 
-                <!-- Updated grid with corrected extensions matching image_10.png -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                    <!-- Photo 1: Bed Frame (.JPG) -->
+                    <!-- Photo 1: Bed Frame -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg overflow-hidden shadow-lg group">
                         <img src="LFW_bed-frame.JPG" alt="Custom Bed Frame Project by Lambertson Fine Woodworking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <!-- Photo 2: Custom Cabinet (.JPG) -->
+                    <!-- Photo 2: Custom Cabinet -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg overflow-hidden shadow-lg group">
                         <img src="LFW_cabinet.JPG" alt="Custom Cabinetry Project by Lambertson Fine Woodworking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <!-- Photo 3: House Trim (.jpg after you convert the HEIC file) -->
+                    <!-- Photo 3: House Trim -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg overflow-hidden shadow-lg group">
-                        <img src="LFW_house-trim.jpg" alt="House Trim and Finish Carpentry Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="LFW_house-trim.JPG" alt="House Trim and Finish Carpentry Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <!-- Photo 4: Tiny House (.JPG) -->
+                    <!-- Photo 4: Tiny House -->
                     <div class="aspect-square bg-vt-forest-dark border border-green-800 rounded-lg overflow-hidden shadow-lg group">
                         <img src="LFW_tiny-house.JPG" alt="Tiny House Renovation Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
@@ -167,7 +176,6 @@
                     <p class="mt-4 text-lg text-vt-text-muted">Proudly serving Lamoille, Caledonia, Orleans, and Washington counties.</p>
                 </div>
                 <div class="max-w-xl mx-auto rounded-lg overflow-hidden shadow-2xl border border-green-800">
-                    <!-- Matches Service_Area_Map.jpg (camel case and lowercase jpg) -->
                     <img src="Service_Area_Map.jpg" alt="Service Area Map for Lamoille, Caledonia, Orleans, and Washington counties" class="w-full h-auto block">
                 </div>
             </div>
@@ -217,8 +225,8 @@
                                 <option value="">Select a category...</option>
                                 <option value="built_ins">Custom Built-ins / Cabinetry</option>
                                 <option value="finish_trim">Finish Carpentry / Trim</option>
-                                <option value="exterior">Decks / Porches / Exterior</option>
-                                <option value="general">General Repair / Other</option>
+                                <option value="historic">Historic Home Renovation</option>
+                                <option value="general">Custom / Other Project</option>
                             </select>
                         </div>
 
