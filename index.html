@@ -254,6 +254,40 @@
             </div>
         </div>
     </footer>
+<!-- Add this right before </body> in index.html -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    if (!form) return;
 
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.innerHTML;
+      submitButton.innerText = 'Sending...';
+      submitButton.disabled = true;
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      try {
+        await fetch('https://hooks.zapier.com/hooks/catch/28387823/44762x6/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        alert('Thank you! Your request has been received. We will reach out to you shortly.');
+        form.reset();
+      } catch (error) {
+        alert('There was an issue sending your message. Please try again or call us directly.');
+      } finally {
+        submitButton.innerHTML = originalButtonText;
+        submitButton.disabled = false;
+      }
+    });
+  });
+</script>
 </body>
 </html>
